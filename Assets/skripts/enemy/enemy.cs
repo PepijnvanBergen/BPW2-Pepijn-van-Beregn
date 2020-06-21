@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     private Transform Player;
+    private playerMovement PM;
     public float speed;
     public float targetDistance;
     public float stopDistance;
@@ -14,6 +15,7 @@ public class enemy : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        PM = GameObject.FindObjectOfType<playerMovement>();
     }
     void Update()
     {
@@ -32,5 +34,14 @@ public class enemy : MonoBehaviour
     public void damage()
     {
         health -= 1;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            int Damage = 1;
+            PM.damage(Damage);
+        }
     }
 }

@@ -66,6 +66,10 @@ public class playerMovement : MonoBehaviour
             armor -= damage;
             SC.UpdateArmor(armor);
         }
+        if(health < 0)
+        {
+            Destroy(gameObject);
+        }
     }
     public void addArmor(int ammount)
     {
