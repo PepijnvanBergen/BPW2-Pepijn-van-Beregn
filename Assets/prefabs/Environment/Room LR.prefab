@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76449c89567e4049819943fde697050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 8170534726126859423, guid: f9e1ca3e7cbeeef45b0be982ae51efd0, type: 3}
   chest: {fileID: 0}
 --- !u!114 &-6879170811565322246
 MonoBehaviour:

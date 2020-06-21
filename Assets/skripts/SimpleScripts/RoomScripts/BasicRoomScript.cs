@@ -15,21 +15,11 @@ public class BasicRoomScript : MonoBehaviour
     void Start()
     {
         GM.basicRooms++;
-    }
+        int rand = Random.Range(0, 3);
 
-    public void Update()
-    {
-        if (GM.basicRooms == 2)
+        if(rand == 2)
         {
-
-        }
-        else if (GM.basicRooms == 3)
-        {
-
-        }
-        else if (GM.basicRooms >= 4)
-        {
-
+            Instantiate(enemy, transform.position, Quaternion.identity);
         }
     }
 }
